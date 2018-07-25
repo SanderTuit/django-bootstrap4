@@ -400,7 +400,7 @@ class FieldRenderer(BaseRenderer):
         if isinstance(self.widget, RadioSelect):
             html = self.radio_list_to_class(html, 'radio radio-success')
         elif isinstance(self.widget, CheckboxSelectMultiple):
-            html = self.list_to_class(html, 'checkbox')
+            html = self.list_to_class(html, 'checkbox check-success')
         elif isinstance(self.widget, SelectDateWidget):
             html = self.fix_date_select_input(html)
         elif isinstance(self.widget, ClearableFileInput):
@@ -413,7 +413,7 @@ class FieldRenderer(BaseRenderer):
         if isinstance(self.widget, CheckboxInput):
             # Wrap checkboxes
             # Note checkboxes do not get size classes, see #318
-            html = '<div class="checkbox">{content}</div>'.format(content=html)
+            html = '<div class="checkbox check-success">{content}</div>'.format(content=html)
         return html
 
     def make_input_group_addon(self, inner_class, outer_class, content):
