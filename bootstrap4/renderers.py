@@ -400,7 +400,7 @@ class FieldRenderer(BaseRenderer):
         if isinstance(self.widget, RadioSelect):
             html = self.radio_list_to_class(html, 'radio radio-success')
         elif isinstance(self.widget, CheckboxSelectMultiple):
-            html = self.list_to_class(html, 'checkbox check-success')
+            html = self.radio_list_to_class(html, 'checkbox check-success')
         elif isinstance(self.widget, SelectDateWidget):
             html = self.fix_date_select_input(html)
         elif isinstance(self.widget, ClearableFileInput):
